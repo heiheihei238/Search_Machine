@@ -1,0 +1,481 @@
+Journal:BMC-Journal
+Classify: All
+Criteria: n = 2 - 5
+start time: 08/01/2023
+end time: 08/21/2023
+
+Article1:
+Title: Clinical characteristics of severe influenza virus-associated pneumonia complicated with bacterial infection in children: a retrospective analysis
+Published date: 21 August 2023
+Author: Qiong-yu Wang, Lin Yuan, Jia-yi Lin, Zhi-qiang Zhuo, Yong-mei Wang, Si-si Li, Min Zhang and Xing-dong Wu
+Link: https://bmcinfectdis.biomedcentral.com/articles/10.1186/s12879-023-08536-x
+PDF link: https://bmcinfectdis.biomedcentral.com/counter/pdf/10.1186/s12879-023-08536-x.pdf
+
+Article1:
+Title: MYC up-regulation confers vulnerability to dual inhibition of CDK12 and CDK13 in high-risk Group 3 medulloblastoma
+Published date: 21 August 2023
+Author: Consuelo Pitolli, Alberto Marini, Marika Guerra, Marco Pieraccioli, Veronica Marabitti, Fernando Palluzzi, Luciano Giacò, Gianpiero Tamburrini, Francesco Cecconi, Francesca Nazio, Claudio Sette and Vittoria Pagliarini
+Link: https://jeccr.biomedcentral.com/articles/10.1186/s13046-023-02790-2
+PDF link: https://jeccr.biomedcentral.com/counter/pdf/10.1186/s13046-023-02790-2.pdf
+
+Article1:
+Title: A model for the dissemination of circulating tumour cell clusters involving platelet recruitment and a plastic switch between cooperative and individual behaviours
+Published date: 21 August 2023
+Author: Jorian D. Hapeman, Caroline S. Carneiro and Aurora M. Nedelcu
+Link: https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-023-02147-5
+PDF link: https://bmcecolevol.biomedcentral.com/counter/pdf/10.1186/s12862-023-02147-5.pdf
+
+Article1:
+Title: Photosensitizing deep-seated cancer cells with photoprotein-conjugated upconversion nanoparticles
+Published date: 19 August 2023
+Author: Sung Hyun Park, Soohyun Han, Sangwoo Park, Hyung Shik Kim, Kyung-Min Kim, Suyeon Kim, Dong Yun Lee, Joonseok Lee and Young-Pil Kim
+Link: https://jnanobiotechnology.biomedcentral.com/articles/10.1186/s12951-023-02057-0
+PDF link: https://jnanobiotechnology.biomedcentral.com/counter/pdf/10.1186/s12951-023-02057-0.pdf
+
+Article1:
+Title: Correction: Bifidobacterium adolescentis induces Decorin+ macrophages via TLR2 to suppress colorectal carcinogenesis
+Published date: 19 August 2023
+Author: Yifeng Lin, Lina Fan, Yadong Qi, Chaochao Xu, Dingjiacheng Jia, Yao Jiang, Shujie Chen and Liangjing Wang
+Link: https://jeccr.biomedcentral.com/articles/10.1186/s13046-023-02796-w
+PDF link: https://jeccr.biomedcentral.com/counter/pdf/10.1186/s13046-023-02796-w.pdf
+
+Article1:
+Title: Influenza A virus infection disrupts oligodendrocyte homeostasis and alters the myelin lipidome in the adult mouse
+Published date: 19 August 2023
+Author: Allison Y. Louie, Justin S. Kim, Jenny Drnevich, Payam Dibaeinia, Hisami Koito, Saurabh Sinha, Daniel B. McKim, Katiria Soto-Diaz, Romana A. Nowak, Aditi Das and Andrew J. Steelman
+Link: https://jneuroinflammation.biomedcentral.com/articles/10.1186/s12974-023-02862-2
+PDF link: https://jneuroinflammation.biomedcentral.com/counter/pdf/10.1186/s12974-023-02862-2.pdf
+
+Article1:
+Title: Targeting FSCN1 with an oral small-molecule inhibitor for treating ocular neovascularization
+Published date: 18 August 2023
+Author: Wen Bai, Jun-Song Ren, Min Xia, Ya Zhao, Jing-Juan Ding, Xi Chen and Qin Jiang
+Link: https://translational-medicine.biomedcentral.com/articles/10.1186/s12967-023-04225-0
+PDF link: https://translational-medicine.biomedcentral.com/counter/pdf/10.1186/s12967-023-04225-0.pdf
+
+Article1:
+Title: The metabolic consequences of HIV/TB co-infection
+Published date: 18 August 2023
+Author: Chandré Herbert, Laneke Luies, Du Toit Loots and Aurelia A. Williams
+Link: https://bmcinfectdis.biomedcentral.com/articles/10.1186/s12879-023-08505-4
+PDF link: https://bmcinfectdis.biomedcentral.com/counter/pdf/10.1186/s12879-023-08505-4.pdf
+
+Article1:
+Title: Embryonic signals mediate extracellular vesicle biogenesis and trafficking at the embryo–maternal interface
+Published date: 18 August 2023
+Author: Maria M. Guzewska, Kamil Myszczynski, Yael Heifetz and Monika M. Kaczmarek
+Link: https://biosignaling.biomedcentral.com/articles/10.1186/s12964-023-01221-1
+PDF link: https://biosignaling.biomedcentral.com/counter/pdf/10.1186/s12964-023-01221-1.pdf
+
+Article1:
+Title: NEK8 regulates colorectal cancer progression via phosphorylating MYC
+Published date: 18 August 2023
+Author: Beibei Cao, Kailun Zhang, Changjie Pan, Yifei Dong and Feng Lu
+Link: https://biosignaling.biomedcentral.com/articles/10.1186/s12964-023-01215-z
+PDF link: https://biosignaling.biomedcentral.com/counter/pdf/10.1186/s12964-023-01215-z.pdf
+
+Article1:
+Title: Feasibility and therapeutical potential of local intracerebral encapsulated cell biodelivery of BDNF to AppNL−G−F knock-in Alzheimer mice
+Published date: 18 August 2023
+Author: Simone Tambaro, Sumonto Mitra, Ruchi Gera, Bengt Linderoth, Lars U. Wahlberg, Taher Darreh-Shori, Homira Behbahani, Per Nilsson and Maria Eriksdotter
+Link: https://alzres.biomedcentral.com/articles/10.1186/s13195-023-01282-x
+PDF link: https://alzres.biomedcentral.com/counter/pdf/10.1186/s13195-023-01282-x.pdf
+
+Article1:
+Title: Selective neuroimmune modulation by type I interferon drives neuropathology and neurologic dysfunction following traumatic brain injury
+Published date: 18 August 2023
+Author: Brittany P. Todd, Zili Luo, Noah Gilkes, Michael S. Chimenti, Zeru Peterson, Madison R. Mix, John T. Harty, Thomas Nickl-Jockschat, Polly J. Ferguson, Alexander G. Bassuk and Elizabeth A. Newell
+Link: https://actaneurocomms.biomedcentral.com/articles/10.1186/s40478-023-01635-5
+PDF link: https://actaneurocomms.biomedcentral.com/counter/pdf/10.1186/s40478-023-01635-5.pdf
+
+Article1:
+Title: Inhibition of serum- and glucocorticoid-induced kinase 1 ameliorates hydrocephalus in preclinical models
+Published date: 18 August 2023
+Author: Alexandra Hochstetler, Hillary Smith, Makenna Reed, Louise Hulme, Paul Territo, Amanda Bedwell, Scott Persohn, Nicola Perrotti, Lucia D’Antona, Francesca Musumeci, Silvia Schenone and Bonnie L. Blazer-Yost
+Link: https://fluidsbarrierscns.biomedcentral.com/articles/10.1186/s12987-023-00461-0
+PDF link: https://fluidsbarrierscns.biomedcentral.com/counter/pdf/10.1186/s12987-023-00461-0.pdf
+
+Article1:
+Title: Students’ COVID-19 vaccine behaviors, intentions, and beliefs at a US Native American-Serving Nontribal Institution (NASNTI)
+Published date: 18 August 2023
+Author: Tapati Dutta, Jon Agley, Yunyu Xiao, Lilian Golzarri-Arroyo and Sumayyah Ali
+Link: https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-023-06439-3
+PDF link: https://bmcresnotes.biomedcentral.com/counter/pdf/10.1186/s13104-023-06439-3.pdf
+
+Article1:
+Title: ITC-6102RO, a novel B7-H3 antibody-drug conjugate, exhibits potent therapeutic effects against B7-H3 expressing solid tumors
+Published date: 18 August 2023
+Author: Seol Hwa Shin, Eun Jin Ju, Jin Park, Eun Jung Ko, Mi Ri Kwon, Hye Won Lee, Ga Won Son, Yun-Yong Park, Yeon Joo Kim, Si Yeol Song, Sangkwang Lee, Beom Seok Seo, Jin-A Song, Sangbin Lim, Doohwan Jung, Sunyoung Kim…
+Link: https://cancerci.biomedcentral.com/articles/10.1186/s12935-023-02991-x
+PDF link: https://cancerci.biomedcentral.com/counter/pdf/10.1186/s12935-023-02991-x.pdf
+
+Article1:
+Title: Apoptosis inhibitor of macrophage (AIM)/CD5L is involved in the pathogenesis of COPD
+Published date: 17 August 2023
+Author: Michiko Takimoto-Sato, Masaru Suzuki, Hiroki Kimura, Haiyan Ge, Munehiro Matsumoto, Hironi Makita, Satoko Arai, Toru Miyazaki, Masaharu Nishimura and Satoshi Konno
+Link: https://respiratory-research.biomedcentral.com/articles/10.1186/s12931-023-02508-0
+PDF link: https://respiratory-research.biomedcentral.com/counter/pdf/10.1186/s12931-023-02508-0.pdf
+
+Article1:
+Title: Electroactive nanoinjection platform for intracellular delivery and gene silencing
+Published date: 17 August 2023
+Author: Ali-Reza Shokouhi, Yaping Chen, Hao Zhe Yoh, Takahide Murayama, Koukou Suu, Yasuhiro Morikawa, Jason Brenker, Tuncay Alan, Nicolas H. Voelcker and Roey Elnathan
+Link: https://jnanobiotechnology.biomedcentral.com/articles/10.1186/s12951-023-02056-1
+PDF link: https://jnanobiotechnology.biomedcentral.com/counter/pdf/10.1186/s12951-023-02056-1.pdf
+
+Article1:
+Title: The tyrosine kinase inhibitor Dasatinib reduces cardiac steatosis and fibrosis in obese, type 2 diabetic mice
+Published date: 17 August 2023
+Author: Yue Gu, Elisa Avolio, Valeria V Alvino, Anita C Thomas, Andrew Herman, Poppy J Miller, Niall Sullivan, Ashton Faulkner and Paolo Madeddu
+Link: https://cardiab.biomedcentral.com/articles/10.1186/s12933-023-01955-9
+PDF link: https://cardiab.biomedcentral.com/counter/pdf/10.1186/s12933-023-01955-9.pdf
+
+Article1:
+Title: Comparative study of a broad qPCR panel and centrifugal flotation for detection of gastrointestinal parasites in fecal samples from dogs and cats in the United States
+Published date: 16 August 2023
+Author: Christian M. Leutenegger, Cecilia E. Lozoya, Jeffrey Tereski, Jan Andrews, Kelly D. Mitchell, Cathy Meeks, Jennifer L. Willcox, Gregory Freeman, Holly L. Richmond, Christian Savard and Michelle D. Evason
+Link: https://parasitesandvectors.biomedcentral.com/articles/10.1186/s13071-023-05904-z
+PDF link: https://parasitesandvectors.biomedcentral.com/counter/pdf/10.1186/s13071-023-05904-z.pdf
+
+Article1:
+Title: MiR-15b-5p and PCSK9 inhibition reduces lipopolysaccharide-induced endothelial dysfunction by targeting SIRT4
+Published date: 16 August 2023
+Author: Elisa Martino, Nunzia D’Onofrio, Anna Balestrieri, Luigi Mele, Celestino Sardu, Raffaele Marfella, Giuseppe Campanile and Maria Luisa Balestrieri
+Link: https://cmbl.biomedcentral.com/articles/10.1186/s11658-023-00482-5
+PDF link: https://cmbl.biomedcentral.com/counter/pdf/10.1186/s11658-023-00482-5.pdf
+
+Article1:
+Title: FAAP100 is required for the resolution of transcription-replication conflicts in primordial germ cells
+Published date: 15 August 2023
+Author: Weiwei Xu, Yajuan Yang, Yongze Yu, Canxin Wen, Simin Zhao, Lili Cao, Shidou Zhao, Yingying Qin and Zi-Jiang Chen
+Link: https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-023-01676-1
+PDF link: https://bmcbiol.biomedcentral.com/counter/pdf/10.1186/s12915-023-01676-1.pdf
+
+Article1:
+Title: Unleashing T cell anti-tumor immunity: new potential for 5-Nonloxytryptamine as an agent mediating MHC-I upregulation in tumors
+Published date: 15 August 2023
+Author: Paweł Stachura, Wei Liu, Haifeng C. Xu, Agnès Wlodarczyk, Olivia Stencel, Piyush Pandey, Melina Vogt, Sanil Bhatia, Daniel Picard, Marc Remke, Karl S. Lang, Dieter Häussinger, Bernhard Homey, Philipp A. Lang, Arndt Borkhardt and Aleksandra A. Pandyra
+Link: https://molecular-cancer.biomedcentral.com/articles/10.1186/s12943-023-01833-8
+PDF link: https://molecular-cancer.biomedcentral.com/counter/pdf/10.1186/s12943-023-01833-8.pdf
+
+Article1:
+Title: Fertilization-induced reactive nitrogen gases and carbon dioxide emissions: insight to the carbon-nitrogen cycles
+Published date: 15 August 2023
+Author: Shu-Yuan Pan, Kung-Hui He and Yu-Lun Liao
+Link: https://sustainenvironres.biomedcentral.com/articles/10.1186/s42834-023-00185-8
+PDF link: https://sustainenvironres.biomedcentral.com/counter/pdf/10.1186/s42834-023-00185-8.pdf
+
+Article1:
+Title: Bioinformatics analysis of the immune cell infiltration characteristics and correlation with crucial diagnostic markers in pulmonary arterial hypertension
+Published date: 15 August 2023
+Author: Guili Lian, Jingxian You, Weijun Lin, Gufeng Gao, Changsheng Xu, Huajun Wang and Li Luo
+Link: https://bmcpulmmed.biomedcentral.com/articles/10.1186/s12890-023-02584-4
+PDF link: https://bmcpulmmed.biomedcentral.com/counter/pdf/10.1186/s12890-023-02584-4.pdf
+
+Article1:
+Title: Fibroblast-to-cardiomyocyte lactate shuttle modulates hypertensive cardiac remodelling
+Published date: 15 August 2023
+Author: Tong Wei, Yuetong Guo, Chenglin Huang, Mengwei Sun, Bin Zhou, Jing Gao and Weili Shen
+Link: https://cellandbioscience.biomedcentral.com/articles/10.1186/s13578-023-01098-0
+PDF link: https://cellandbioscience.biomedcentral.com/counter/pdf/10.1186/s13578-023-01098-0.pdf
+
+Article1:
+Title: Microglia Sirt6 modulates the transcriptional activity of NRF2 to ameliorate high-fat diet-induced obesity
+Published date: 15 August 2023
+Author: Xiaoxia Xiao, Huiling Hu, Yadi Zhong, Yingjian Chen, Kaijia Tang, Zhisen Pan, Jiawen Huang, Xiaoying Yang, Qi Wang and Yong Gao
+Link: https://molmed.biomedcentral.com/articles/10.1186/s10020-023-00676-9
+PDF link: https://molmed.biomedcentral.com/counter/pdf/10.1186/s10020-023-00676-9.pdf
+
+Article1:
+Title: Oleoylethanolamide facilitates PPARα and TFEB signaling and attenuates Aβ pathology in a mouse model of Alzheimer’s disease
+Published date: 15 August 2023
+Author: Michele M. Comerota, Manasee Gedam, Wen Xiong, Feng Jin, Lisheng Deng, Meng C. Wang, Jin Wang and Hui Zheng
+Link: https://molecularneurodegeneration.biomedcentral.com/articles/10.1186/s13024-023-00648-x
+PDF link: https://molecularneurodegeneration.biomedcentral.com/counter/pdf/10.1186/s13024-023-00648-x.pdf
+
+Article1:
+Title: Investigations of brain-wide functional and structural networks of dopaminergic and CamKIIα-positive neurons in VTA with DREADD-fMRI and neurotropic virus tracing technologies
+Published date: 14 August 2023
+Author: Ning Zheng, Zhu Gui, Xiaodong Liu, Yang Wu, Huadong Wang, Aoling Cai, Jinfeng Wu, Xihai Li, Challika Kaewborisuth, Zhijian Zhang, Qitian Wang, Anne Manyande, Fuqiang Xu and Jie Wang
+Link: https://translational-medicine.biomedcentral.com/articles/10.1186/s12967-023-04362-6
+PDF link: https://translational-medicine.biomedcentral.com/counter/pdf/10.1186/s12967-023-04362-6.pdf
+
+Article1:
+Title: Societal costs and health related quality of life in adult atopic dermatitis
+Published date: 14 August 2023
+Author: Zsuzsanna Beretzky, Kamilla Koszorú, Fanni Rencz, Krisztina Hajdu, Júlia Borza, Katalin Bodai, Xu Feifei, Andrea Szegedi, Miklós Sárdy and Valentin Brodszky
+Link: https://bmchealthservres.biomedcentral.com/articles/10.1186/s12913-023-09840-7
+PDF link: https://bmchealthservres.biomedcentral.com/counter/pdf/10.1186/s12913-023-09840-7.pdf
+
+Article1:
+Title: STAT3/LKB1 controls metastatic prostate cancer by regulating mTORC1/CREB pathway
+Published date: 12 August 2023
+Author: Jan Pencik, Cecile Philippe, Michaela Schlederer, Emine Atas, Matteo Pecoraro, Sandra Grund-Gröschke, Wen (Jess) Li, Amanda Tracz, Isabel Heidegger, Sabine Lagger, Karolína Trachtová, Monika Oberhuber, Ellen Heitzer, Osman Aksoy, Heidi A. Neubauer, Bettina Wingelhofer…
+Link: https://molecular-cancer.biomedcentral.com/articles/10.1186/s12943-023-01825-8
+PDF link: https://molecular-cancer.biomedcentral.com/counter/pdf/10.1186/s12943-023-01825-8.pdf
+
+Article1:
+Title: Diminished activation of excitatory neurons in the prelimbic cortex leads to impaired working memory capacity in mice
+Published date: 11 August 2023
+Author: Li-Xin Jiang, Geng-Di Huang, Yong-Lu Tian, Ri-Xu Cong, Xue Meng, Hua-Li Wang, Chen Zhang and Xin Yu
+Link: https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-023-01674-3
+PDF link: https://bmcbiol.biomedcentral.com/counter/pdf/10.1186/s12915-023-01674-3.pdf
+
+Article1:
+Title: Factors affecting adherence to a high-risk surveillance protocol among patients with Li-Fraumeni syndrome
+Published date: 11 August 2023
+Author: Kaylee A. Underkofler, Martha H. Thomas, Christina J. Taylor, Christa L. Mazur, Sarah H. Erickson and Kari L. Ring
+Link: https://hccpjournal.biomedcentral.com/articles/10.1186/s13053-023-00259-z
+PDF link: https://hccpjournal.biomedcentral.com/counter/pdf/10.1186/s13053-023-00259-z.pdf
+
+Article1:
+Title: Target delivery of a PD-1-TREM2 scFv by CAR-T cells enhances anti-tumor efficacy in colorectal cancer
+Published date: 10 August 2023
+Author: Jian Chen, Tianchuan Zhu, Guanmin Jiang, Qi Zeng, Zhijian Li and Xi Huang
+Link: https://molecular-cancer.biomedcentral.com/articles/10.1186/s12943-023-01830-x
+PDF link: https://molecular-cancer.biomedcentral.com/counter/pdf/10.1186/s12943-023-01830-x.pdf
+
+Article1:
+Title: Mother–child interactions in adolescents with borderline personality disorder traits and the impact of early life maltreatment
+Published date: 10 August 2023
+Author: Katharina Williams, Leonie Fleck, Anna Fuchs, Julian Koenig and Michael Kaess
+Link: https://capmh.biomedcentral.com/articles/10.1186/s13034-023-00645-4
+PDF link: https://capmh.biomedcentral.com/counter/pdf/10.1186/s13034-023-00645-4.pdf
+
+Article1:
+Title: Association between anion gap and all-cause mortality of critically ill surgical patients: a retrospective cohort study
+Published date: 9 August 2023
+Author: Xu Sun, Jianhong Lu, Wenqian Weng and Qiang Yan
+Link: https://bmcsurg.biomedcentral.com/articles/10.1186/s12893-023-02137-w
+PDF link: https://bmcsurg.biomedcentral.com/counter/pdf/10.1186/s12893-023-02137-w.pdf
+
+Article1:
+Title: Hypnosis to reduce fear of falling in hospitalized older adults: a feasibility randomized controlled trial
+Published date: 9 August 2023
+Author: Clémence Cuvelier, Mélany Hars, Maria Pia Zamorani-Bianchi, François R. Herrmann, Catherine Ducharne Wieczorkiewicz, Dina Zekry, Gabriel Gold and Andrea Trombetti
+Link: https://pilotfeasibilitystudies.biomedcentral.com/articles/10.1186/s40814-023-01366-3
+PDF link: https://pilotfeasibilitystudies.biomedcentral.com/counter/pdf/10.1186/s40814-023-01366-3.pdf
+
+Article1:
+Title: Lentinula Edodes Mycelia extract regulates the function of antigen-presenting cells to activate immune cells and prevent tumor-induced deterioration of immune function
+Published date: 8 August 2023
+Author: Shota Kajiyama, Takahiro Nagatake, Satoru Ishikawa, Koji Hosomi, Yuki Shimada, Yasunori Matsui and Jun Kunisawa
+Link: https://bmccomplementmedtherapies.biomedcentral.com/articles/10.1186/s12906-023-04106-5
+PDF link: https://bmccomplementmedtherapies.biomedcentral.com/counter/pdf/10.1186/s12906-023-04106-5.pdf
+
+Article1:
+Title: Mechanisms of initiation of cortical spreading depression
+Published date: 8 August 2023
+Author: Marina Vitale, Angelita Tottene, Maral Zarin Zadeh, KC Brennan and Daniela Pietrobon
+Link: https://thejournalofheadacheandpain.biomedcentral.com/articles/10.1186/s10194-023-01643-9
+PDF link: https://thejournalofheadacheandpain.biomedcentral.com/counter/pdf/10.1186/s10194-023-01643-9.pdf
+
+Article1:
+Title: GATA2 co-opts TGFβ1/SMAD4 oncogenic signaling and inherited variants at 6q22 to modulate prostate cancer progression
+Published date: 8 August 2023
+Author: Xiayun Yang, Qin Zhang, Shuxuan Li, Raman Devarajan, Binjie Luo, Zenglai Tan, Zixian Wang, Nikolaos Giannareas, Tomasz Wenta, Wenlong Ma, Yuqing Li, Yuehong Yang, Aki Manninen, Song Wu and Gong-Hong Wei
+Link: https://jeccr.biomedcentral.com/articles/10.1186/s13046-023-02745-7
+PDF link: https://jeccr.biomedcentral.com/counter/pdf/10.1186/s13046-023-02745-7.pdf
+
+Article1:
+Title: Mesenchymal stem cells shift the pro-inflammatory phenotype of neutrophils to ameliorate acute lung injury
+Published date: 8 August 2023
+Author: Bing Feng, Xudong Feng, Yingduo Yu, Haoying Xu, Qingqing Ye, Ruitian Hu, Xinru Fang, Feiqiong Gao, Jian Wu, Qiaoling Pan, Jiong Yu, Guanjing Lang, Lanjuan Li and Hongcui Cao
+Link: https://stemcellres.biomedcentral.com/articles/10.1186/s13287-023-03438-w
+PDF link: https://stemcellres.biomedcentral.com/counter/pdf/10.1186/s13287-023-03438-w.pdf
+
+Article1:
+Title: Comparison of the different monosodium urate crystals in the preparation process and pro-inflammation
+Published date: 8 August 2023
+Author: Fei Yan, Hui Zhang, Xuan Yuan, Xuefeng Wang, Maichao Li, Youlin Fan, Yuwei He, Zhaotong Jia, Lin Han and Zhen Liu
+Link: https://advancesinrheumatology.biomedcentral.com/articles/10.1186/s42358-023-00307-1
+PDF link: https://advancesinrheumatology.biomedcentral.com/counter/pdf/10.1186/s42358-023-00307-1.pdf
+
+Article1:
+Title: Comprehensive analysis of the immunogenic cell death-related signature for predicting prognosis and immunotherapy efficiency in patients with lung adenocarcinoma
+Published date: 8 August 2023
+Author: Yingshu Cui, Yi Li, Shan Long, Yuanyuan Xu, Xinxin Liu, Zhijia Sun, Yuanyuan Sun, Jia Hu and Xiaosong Li
+Link: https://bmcmedgenomics.biomedcentral.com/articles/10.1186/s12920-023-01604-w
+PDF link: https://bmcmedgenomics.biomedcentral.com/counter/pdf/10.1186/s12920-023-01604-w.pdf
+
+Article1:
+Title: The effect of water storage on nanoindentation creep of various CAD-CAM composite blocks
+Published date: 7 August 2023
+Author: Rasha A. Alamoush, Nesreen A. Salim, Alaaeldin Elraggal, Julian D. Satterthwaite and Nikolaos Silikas
+Link: https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-023-03145-1
+PDF link: https://bmcoralhealth.biomedcentral.com/counter/pdf/10.1186/s12903-023-03145-1.pdf
+
+Article1:
+Title: Effectiveness of home-based exercise in breast cancer survivors: a randomized clinical trial
+Published date: 7 August 2023
+Author: Vahid Farajivafa, Nasim Khosravi, Nilofar Rezaee, Maryam Koosha and Shahpar Haghighat
+Link: https://bmcsportsscimedrehabil.biomedcentral.com/articles/10.1186/s13102-023-00710-7
+PDF link: https://bmcsportsscimedrehabil.biomedcentral.com/counter/pdf/10.1186/s13102-023-00710-7.pdf
+
+Article1:
+Title: HIF-1α increases the osteogenic capacity of ADSCs by coupling angiogenesis and osteogenesis via the HIF-1α/VEGF/AKT/mTOR signaling pathway
+Published date: 7 August 2023
+Author: Shuang Song, Guanhua Zhang, Xutao Chen, Jian Zheng, Xiangdong Liu, Yiqing Wang, Zijun Chen, Yuxi Wang, Yingliang Song and Qin Zhou
+Link: https://jnanobiotechnology.biomedcentral.com/articles/10.1186/s12951-023-02020-z
+PDF link: https://jnanobiotechnology.biomedcentral.com/counter/pdf/10.1186/s12951-023-02020-z.pdf
+
+Article1:
+Title: RNA-binding protein CCDC137 activates AKT signaling and promotes hepatocellular carcinoma through a novel non-canonical role of DGCR8 in mRNA localization
+Published date: 5 August 2023
+Author: Shuang Tao, Shu-Juan Xie, Li-Ting Diao, Guo Lv, Ya-Rui Hou, Yan-Xia Hu, Wan-Yi Xu, Bin Du and Zhen-Dong Xiao
+Link: https://jeccr.biomedcentral.com/articles/10.1186/s13046-023-02749-3
+PDF link: https://jeccr.biomedcentral.com/counter/pdf/10.1186/s13046-023-02749-3.pdf
+
+Article1:
+Title: Regulation of serotonin production by specific microbes from piglet gut
+Published date: 5 August 2023
+Author: Ziyu Liu, Yidan Ling, Yu Peng, Shuibing Han, Yuting Ren, Yujia Jing, Wenlu Fan, Yong Su, Chunlong Mu and Weiyun Zhu
+Link: https://jasbsci.biomedcentral.com/articles/10.1186/s40104-023-00903-7
+PDF link: https://jasbsci.biomedcentral.com/counter/pdf/10.1186/s40104-023-00903-7.pdf
+
+Article1:
+Title: Construction and validation of an immune infiltration-related risk model for predicting prognosis and immunotherapy response in low grade glioma
+Published date: 5 August 2023
+Author: Jinna Li, Qing Guo and Rui Xing
+Link: https://bmccancer.biomedcentral.com/articles/10.1186/s12885-023-11222-5
+PDF link: https://bmccancer.biomedcentral.com/counter/pdf/10.1186/s12885-023-11222-5.pdf
+
+Article1:
+Title: Using integrated analysis from multicentre studies to identify RNA methylation-related lncRNA risk stratification systems for glioma
+Published date: 5 August 2023
+Author: Fanxuan Huang, Xinyu Wang, Junzhe Zhong, Hao Chen, Dan Song, Tianye Xu, Kaifu Tian, Penggang Sun, Nan Sun, Jie Qin, Yu Song, Wenbin Ma, Yuxiang Liu, Daohan Yu, Xiangqi Meng, Chuanlu Jiang…
+Link: https://cancerci.biomedcentral.com/articles/10.1186/s12935-023-03001-w
+PDF link: https://cancerci.biomedcentral.com/counter/pdf/10.1186/s12935-023-03001-w.pdf
+
+Article1:
+Title: Mesenchymal stem cells alleviate dexamethasone-induced muscle atrophy in mice and the involvement of ERK1/2 signalling pathway
+Published date: 4 August 2023
+Author: Belle Yu-Hsuan Wang, Allen Wei-Ting Hsiao, Hoi Ting Shiu, Nicodemus Wong, Amanda Yu-Fan Wang, Chien-Wei Lee, Oscar Kuang-Sheng Lee and Wayne Yuk-Wai Lee
+Link: https://stemcellres.biomedcentral.com/articles/10.1186/s13287-023-03418-0
+PDF link: https://stemcellres.biomedcentral.com/counter/pdf/10.1186/s13287-023-03418-0.pdf
+
+Article1:
+Title: Astragaloside IV ameliorates experimental autoimmune myasthenia gravis by regulating CD4 + T cells and altering gut microbiota
+Published date: 4 August 2023
+Author: Senhui Weng, Linwen Huang, Bingxing Cai, Long He, Shuting Wen, Jinghao Li, Zhuotai Zhong, Haiyan Zhang, Chongyang Huang, Yunying Yang, Qilong Jiang and Fengbin Liu
+Link: https://cmjournal.biomedcentral.com/articles/10.1186/s13020-023-00798-6
+PDF link: https://cmjournal.biomedcentral.com/counter/pdf/10.1186/s13020-023-00798-6.pdf
+
+Article1:
+Title: VPS35 and α-Synuclein fail to interact to modulate neurodegeneration in rodent models of Parkinson’s disease
+Published date: 4 August 2023
+Author: Xi Chen, Elpida Tsika, Nathan Levine and Darren J. Moore
+Link: https://molecularneurodegeneration.biomedcentral.com/articles/10.1186/s13024-023-00641-4
+PDF link: https://molecularneurodegeneration.biomedcentral.com/counter/pdf/10.1186/s13024-023-00641-4.pdf
+
+Article1:
+Title: Development of a nomogram to predict negative postoperative behavioral changes based on a prospective cohort
+Published date: 4 August 2023
+Author: Lijing Li, Jianmin Zhang, Jiayi Li, Yi Ren, Zhengzheng Gao, Jia Gao, Fuzhou Zhang, Fang Wang and Tiehua Zheng
+Link: https://bmcanesthesiol.biomedcentral.com/articles/10.1186/s12871-023-02228-4
+PDF link: https://bmcanesthesiol.biomedcentral.com/counter/pdf/10.1186/s12871-023-02228-4.pdf
+
+Article1:
+Title: LINC02159 promotes non-small cell lung cancer progression via ALYREF/YAP1 signaling
+Published date: 4 August 2023
+Author: Qiurong Yang, Maoye Wang, Jing Xu, Dan Yu, Yixin Li, Yanke Chen, Xiaoxin Zhang, Jiahui Zhang, Jianmei Gu and Xu Zhang
+Link: https://molecular-cancer.biomedcentral.com/articles/10.1186/s12943-023-01814-x
+PDF link: https://molecular-cancer.biomedcentral.com/counter/pdf/10.1186/s12943-023-01814-x.pdf
+
+Article1:
+Title: MicroRNA-144-3p protects against chemotherapy-induced apoptosis of ovarian granulosa cells and activation of primordial follicles by targeting MAP3K9
+Published date: 3 August 2023
+Author: Meng Liu, Bang Xiao, Yiqing Zhu, Meiting Chen, Jinfeng Huang, Haiyan Guo and Fang Wang
+Link: https://eurjmedres.biomedcentral.com/articles/10.1186/s40001-023-01231-2
+PDF link: https://eurjmedres.biomedcentral.com/counter/pdf/10.1186/s40001-023-01231-2.pdf
+
+Article1:
+Title: ATRA sensitized the response of hepatocellular carcinoma to Sorafenib by downregulation of p21-activated kinase 1
+Published date: 3 August 2023
+Author: Kai Wang, Xun Qiu, Zhensheng Zhang, Hanzhi Xu, Yawen Tan, Renyi Su, Fengqiang Gao, Jianyong Zhuo, Wangyao Li, Zhengxing Lian, Hong He and Xiao Xu
+Link: https://biosignaling.biomedcentral.com/articles/10.1186/s12964-023-01194-1
+PDF link: https://biosignaling.biomedcentral.com/counter/pdf/10.1186/s12964-023-01194-1.pdf
+
+Article1:
+Title: Prmt5 deficiency inhibits CD4+ T-cell Klf2/S1pr1 expression and ameliorates EAE disease
+Published date: 2 August 2023
+Author: Yingxia Zheng, Zheyi Chen, Bingqian Zhou, Shiyu Chen, Ningdai Chen and Lisong Shen
+Link: https://jneuroinflammation.biomedcentral.com/articles/10.1186/s12974-023-02854-2
+PDF link: https://jneuroinflammation.biomedcentral.com/counter/pdf/10.1186/s12974-023-02854-2.pdf
+
+Article1:
+Title: Transcriptome alterations in peripheral blood B cells of patients with multiple sclerosis receiving immune reconstitution therapy
+Published date: 2 August 2023
+Author: Michael Hecker, Brit Fitzner, Nina Boxberger, Elena Putscher, Robby Engelmann, Wendy Bergmann, Michael Müller, Isis Ludwig-Portugall, Margit Schwartz, Stefanie Meister, Ales Dudesek, Alexander Winkelmann, Dirk Koczan and Uwe Klaus Zettl
+Link: https://jneuroinflammation.biomedcentral.com/articles/10.1186/s12974-023-02859-x
+PDF link: https://jneuroinflammation.biomedcentral.com/counter/pdf/10.1186/s12974-023-02859-x.pdf
+
+Article1:
+Title: Oligofructose improves small intestinal lipid-sensing mechanisms via alterations to the small intestinal microbiota
+Published date: 2 August 2023
+Author: Savanna N. Weninger, Chloe Herman, Rachel K. Meyer, Eve T. Beauchemin, Archana Kangath, Adelina I. Lane, Taylor M. Martinez, Tahia Hasneen, Sierra A. Jaramillo, Jason Lindsey, Gayatri Vedantam, Haijiang Cai, Emily K. Cope, J. Gregory Caporaso and Frank A. Duca
+Link: https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-023-01590-2
+PDF link: https://microbiomejournal.biomedcentral.com/counter/pdf/10.1186/s40168-023-01590-2.pdf
+
+Article1:
+Title: A synbiotic mixture of selected oligosaccharides and bifidobacteria assists murine gut microbiota restoration following antibiotic challenge
+Published date: 2 August 2023
+Author: Emily C. Hoedt, Cara M. Hueston, Nora Cash, Roger S. Bongers, Jonathan M. Keane, Kees van Limpt, Kaouther Ben Amor, Jan Knol, John MacSharry and Douwe van Sinderen
+Link: https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-023-01595-x
+PDF link: https://microbiomejournal.biomedcentral.com/counter/pdf/10.1186/s40168-023-01595-x.pdf
+
+Article1:
+Title: APP family member dimeric complexes are formed predominantly in synaptic compartments
+Published date: 2 August 2023
+Author: Sandra Schilling, Alexander August, Mathieu Meleux, Carolin Conradt, Luisa M. Tremmel, Sandra Teigler, Virginie Adam, Ulrike C. Müller, Edward H. Koo, Stefan Kins and Simone Eggert
+Link: https://cellandbioscience.biomedcentral.com/articles/10.1186/s13578-023-01092-6
+PDF link: https://cellandbioscience.biomedcentral.com/counter/pdf/10.1186/s13578-023-01092-6.pdf
+
+Article1:
+Title: Exosomal PGE2 from M2 macrophages inhibits neutrophil recruitment and NET formation through lipid mediator class switching in sepsis
+Published date: 2 August 2023
+Author: Yang Jiao, Ti Zhang, Mei Liu, Luyang Zhou, Mengzhi Qi, Xin Xie, Xueyin Shi, Xiaoping Gu and Zhengliang Ma
+Link: https://jbiomedsci.biomedcentral.com/articles/10.1186/s12929-023-00957-9
+PDF link: https://jbiomedsci.biomedcentral.com/counter/pdf/10.1186/s12929-023-00957-9.pdf
+
+Article1:
+Title: Puricelli biconvex arthroplasty: an experimental study in sheep
+Published date: 2 August 2023
+Author: Renan Langie, Viviane Neves Pacheco, Vinicius Matheus Szydloski, Adriana Corsetti, Alexandre Silva de Quevedo, Fábio Pinto da Silva, Fabrício Mezzomo Collares, Fernanda Visioli, Deise Ponzoni and Edela Puricelli
+Link: https://head-face-med.biomedcentral.com/articles/10.1186/s13005-023-00379-w
+PDF link: https://head-face-med.biomedcentral.com/counter/pdf/10.1186/s13005-023-00379-w.pdf
+
+Article1:
+Title: Xanthohumol hinders invasion and cell cycle progression in cancer cells through targeting MMP2, MMP9, FAK and P53 genes in three-dimensional breast and lung cancer cells culture
+Published date: 2 August 2023
+Author: Zohreh Gholizadeh Siahmazgi, Shiva Irani, Ali Ghiaseddin, Parviz Fallah and Vahid Haghpanah
+Link: https://cancerci.biomedcentral.com/articles/10.1186/s12935-023-03009-2
+PDF link: https://cancerci.biomedcentral.com/counter/pdf/10.1186/s12935-023-03009-2.pdf
+
+Article1:
+Title: M7G methylated core genes (METTL1 and WDR4) and associated RNA risk signatures are associated with prognosis and immune escape in HCC
+Published date: 1 August 2023
+Author: Rui Li, Xincheng Liu, Kaiyuan Deng and Xin Wang
+Link: https://bmcmedgenomics.biomedcentral.com/articles/10.1186/s12920-023-01614-8
+PDF link: https://bmcmedgenomics.biomedcentral.com/counter/pdf/10.1186/s12920-023-01614-8.pdf
+
+Article1:
+Title: HOXA1 participates in VSMC-to-macrophage-like cell transformation via regulation of NF-κB p65 and KLF4: a potential mechanism of atherosclerosis pathogenesis
+Published date: 1 August 2023
+Author: Zhiyang Han, Haidi Hu, MingZhu Yin, Yu Lin, Yan Yan, Peng Han, Bing Liu and Bao Jing
+Link: https://molmed.biomedcentral.com/articles/10.1186/s10020-023-00685-8
+PDF link: https://molmed.biomedcentral.com/counter/pdf/10.1186/s10020-023-00685-8.pdf
+
+Article1:
+Title: Shank3 deletion in PV neurons is associated with abnormal behaviors and neuronal functions that are rescued by increasing GABAergic signaling
+Published date: 1 August 2023
+Author: Jessica Pagano, Silvia Landi, Alessia Stefanoni, Gabriele Nardi, Marica Albanesi, Helen F. Bauer, Enrico Pracucci, Michael Schön, Gian Michele Ratto, Tobias M. Boeckers, Carlo Sala and Chiara Verpelli
+Link: https://molecularautism.biomedcentral.com/articles/10.1186/s13229-023-00557-2
+PDF link: https://molecularautism.biomedcentral.com/counter/pdf/10.1186/s13229-023-00557-2.pdf
+
+Article1:
+Title: Colonic stem cells from normal tissues adjacent to tumor drive inflammation and fibrosis in colorectal cancer
+Published date: 1 August 2023
+Author: Yuanyuan Zhao, Mengmeng Guo, Fuqiang Zhao, Qian Liu and Xia Wang
+Link: https://biosignaling.biomedcentral.com/articles/10.1186/s12964-023-01140-1
+PDF link: https://biosignaling.biomedcentral.com/counter/pdf/10.1186/s12964-023-01140-1.pdf

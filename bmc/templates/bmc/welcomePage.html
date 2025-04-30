@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bmc/welcomeStyle.css' %}">
+</head>
+<body id="body" class="body">
+<div class="main">
+    <div class="card">
+        <div class="content">
+            <h2>01</h2>
+            <h3>BMC-Journal</h3>
+            <p>Since 1999, BMC has been committed to making high quality research available to anyone who wants to access it.</p>
+            <a href="1/search">Start</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h2>02</h2>
+            <h3>PLOS</h3>
+            <p>PLOS is a nonprofit, Open Access publisher empowering researchers to accelerate progress in science and medicine by leading a transformation in research communication.</p>
+            <a href="3/search">Start</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h2>03</h2>
+            <h3>Science</h3>
+            <p>Science Translational Medicine is the leading weekly online journal publishing research at the intersection of science, engineering and medicine.</p>
+            <a href="2/search">Start</a>
+        </div>
+    </div>
+</div>
+</body>
+
+<!-- Involves js that fades in and out on link jumps -->
+<script>
+    // Executed when the page is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+    // Add fade-in animation class name
+    document.getElementById('body').classList.add('content-fade-in');
+    });
+
+    // Listening for page link clicks
+    document.addEventListener('click', function(event) {
+        let target = event.target;
+
+        // Check if the clicked element is a link
+        if (target.tagName === 'A') {
+            event.preventDefault(); // Blocking the default page jump behavior
+
+            // Adding a Fade-out Animation Class Name
+            document.getElementById('body').classList.add('content-fade-out');
+
+            // Doing the page jump after the end of the animation
+            setTimeout(function() {
+            window.location.href = target.href;
+            }, 1000);
+        }
+    });
+</script>
+</html>

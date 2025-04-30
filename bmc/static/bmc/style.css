@@ -6,10 +6,38 @@
 .searchContainer {
     height: 100vh;
     width: 100vw;
+    position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
     overflow: scroll;
+    z-index: 1;
+}
+
+body::before{
+    /* 注意！对于伪元素而言，如果不添加content属性，是不会显示的 */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2193b0, #6dd5ed);
+    /* 将元素切成圆形，30%表示圆的直径，right 70%表示圆心的位置 */
+    clip-path: circle(20% at right 30%);
+}
+
+body::after{
+    /* 注意！对于伪元素而言，如果不添加content属性，是不会显示的 */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#ee9ca7, #ffdde1);
+    /* 将元素切成圆形，10%表示圆的直径，10% 10%表示圆心的位置 */
+    clip-path: circle(30% at 10% 90%);
 }
 
 .container_left {
@@ -37,8 +65,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(255,255,255,0.9);
     border-radius: 15px;
+    background-color: rgba(255,255,255,0.9);
     box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
     border-top: 1px solid rgba(255,255,255,0.5);
     border-left: 1px solid rgba(255,255,255,0.5);
@@ -49,14 +77,14 @@
     font-size: medium;
     font-weight: lighter;
     padding: 3px;
-    margin-top: 7%;
+    margin-top: 5%;
     width: 85%;
 }
 
 .container_left_main_choose {
     font-size: medium;
     font-weight: bolder;
-    margin: 7%;
+    margin: 5%;
 }
 
 .container_left_main_select {
@@ -89,9 +117,9 @@
     margin-left: 5%;
 }
 
-.container_right_sort {
+.container_right_control {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     height: 5%;
     width: 85%;
@@ -100,16 +128,22 @@
 }
 
 .container_right_main {
-    height: 65%;
+    height: 60%;
     width: 85%;
     overflow: scroll;
     scroll-behavior: smooth;
 }
 
+.container_right_bubble {
+    width: 100%;
+    display: none;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    margin-top: 15%;
+}
+
 .container_right_main_text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     border-top: black 1px solid;
     margin-bottom: 15px;
 }
@@ -130,4 +164,93 @@
     font-weight: normal;
     font-size: medium;
     margin-top: 7px;
+}
+
+.container_bubble{
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.bubble{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /*radial gradient*/
+    background: radial-gradient(circle at 75% 30%,
+    #fff 5px,#ff21c0 8%, #5b5b5b 60%, #ff21c0 100%);
+    border-radius: 50%;
+    /*阴影*/
+    box-shadow: inset 0 0 20px #fff,
+    inset 10px 0 46px #b7d3f5,
+    inset 80px 0 60px #f2a0e0,
+    inset -20px -60px 100px #eee6aa,
+    inset 0 50px 140px #f2eaa0,
+    0 0 90px #fbfafa;
+    /*Execution animation Animation name Duration
+    Acceleration followed by deceleration Unlimited playback*/
+    animation: bubble 3s ease-in-out infinite;
+}
+.shadow{
+    background-color: rgba(0,0,0,0.15);
+    width: 40px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -19px;
+    bottom: -12px;
+    /*A little blurring effect*/
+    filter: blur(1px);
+    animation: 3s ease-in-out infinite shadow;
+}
+/*Bubble Floating Animation*/
+@keyframes bubble{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        tranSform: translateY(-80px);
+    }
+}
+/*Shadow animation*/
+@keyframes shadow {
+    0%,100%{
+        transform: scale(0.5);
+        background: #333233;
+    }
+    50%{
+        transform: scale(1);
+        background: #706e71;
+    }
+}
+
+.body {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.content-fade-in {
+  opacity: 1;
+}
+
+.content-fade-out {
+  opacity: 0;
+}
+
+/* 背景遮罩层样式 */
+.modal-backdrop {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1; /* 更高的 z-index 值确保遮罩层覆盖模态框 */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 透明度可以根据需要调整 */
+}
+
+/* 让模态框居中显示 */
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - 1rem); /* 这里的值请根据实际情况调整 */
 }

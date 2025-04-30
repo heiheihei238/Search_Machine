@@ -13,14 +13,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 </head>
-<body>
+<body id="body" class="body">
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="successModalLabel">Operation erfolgreich</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Vorgang abgeschlossen.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">abschliessen</button>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="searchContainer">
 
     <!-- left container -->
     <div class="container_left">
-        <h3 class="container_left_title">
+        <div>
+            <a href="http://127.0.0.1:8000/bmc/">
+                <i class="fa fa-arrow-left" style="font-size: 36px"></i>
+            </a>
+            <h3 class="container_left_title">
             t-test search machine
-        </h3>
+            </h3>
+        </div>
         <div class="container_left_main">
             {% csrf_token %}
             <div class="container_left_main_intro">
@@ -29,24 +50,28 @@
             <div class="container_left_main_choose">
                 Wählen Sie eine Zeitungswebsite
             </div>
-            <select class="container_left_main_select" aria-label="Default select example" name="choice" id="selectButton1" title="Please select...">
-                <option selected disabled>Please select...</option>
-                <option value="1" id="1">One</option>
-                <option value="2" id="2">Two</option>
-                <option value="3" id="3">Three</option>
+            <!-- The first drop-down box, which control the selection of journals -->
+            <select class="container_left_main_select" aria-label="Default select example" name="choice" id="selectButton1" title="Please select..." aria-readonly="true">
+                <option value="1" id="1">BMC-Journal</option>
+                <option value="2" id="2">PLOS</option>
+                <option value="3" id="3">Science-Translational-Medicine</option>
             </select>
             <div class="container_left_main_choose">
                 Wählen Sie eine Kategorie
             </div>
+            <!-- The second drop-down box, which will change while the first drop-down box is selected -->
             <select class="container_left_main_select" aria-label="Default select example" id="selectButton2" disabled></select>
             <div class="container_left_main_choose">
                 Wählen Sie den Zeitraum der Veröffentlichung
             </div>
 
-            <div style="display: flex; flex-direction: row; width: 75%; align-items: center; justify-content: space-between">
-                <div class="row form-group" style="width: 45%">
+
+            <!-- The datepicker section -->
+            <div class="input-group input-daterange" style="display: flex; flex-direction: column; width: 60%; align-items: center; justify-content: space-between">
+                <div class="row form-group" style="width: 90%">
+                    <div>Startdatum: </div>
                     <div class="input-group date" id="datepicker1">
-                        <input type="text" class="form-control" id="start">
+                        <input type="text" class="form-control" id="start" readonly>
                         <span class="input-group-append">
                             <span class="input-group-text bg-white d-block">
                                 <i class="fa fa-calendar"></i>
@@ -54,10 +79,10 @@
                         </span>
                     </div>
                 </div>
-                <div style="width: 5%">to</div>
-                <div class="row form-group" style="width: 45%">
-                    <div class="input-group date" id="datepicker2">
-                        <input type="text" class="form-control" id="end">
+                <div class="row form-group" style="width: 90%; margin-top: 2%">
+                    <div>Enddatum: </div>
+                    <div class="input-group date"id="datepicker2">
+                        <input type="text" class="form-control" id="end" readonly>
                         <span class="input-group-append">
                             <span class="input-group-text bg-white d-block">
                                 <i class="fa fa-calendar"></i>
@@ -66,105 +91,303 @@
                     </div>
                 </div>
             </div>
-            <script type="text/javascript">
-                $(function() {
-                    $('#datepicker1').datepicker();
-                });
-                $(function() {
-                    $('#datepicker2').datepicker();
-                });
-            </script>
+
             <div class="container_left_main_choose">
                 Bitte geben Sie ihre Suchkriterien ein
             </div>
             <div class="container_left_main_select">
                 <input type="text" class="form-control" placeholder="Suchkriterien" aria-label="Suchkriterien" aria-describedby="basic-addon1" id="keriterien">
             </div>
-            <button class="btn btn-primary" style="margin-top: 30px; margin-bottom: 20px" type="submit" id="search">Search</button>
+            <button class="btn btn-primary" style="margin-top: 30px; margin-bottom: 20px" type="submit" id="search">Suche</button>
         </div>
     </div>
-
-<script language="JavaScript">
-    $(document).ready(function (){
-        $("#selectButton1").on("change", function (){
-            let selectedValue = $('select#selectButton1 option:selected').text();
-            document.getElementById("selectButton2").options.length = 0;
-
-            $.get("afterselect/",{'value': selectedValue}, function (select){
-                console.log(select)
-                let selection = eval('('+select+')')
-                console.log(selection)
-                let listFleet = "";
-                for(let key in selection){
-                        listFleet += "<option value='" + selection[key] + "'>" + selection[key] + "</option>";
-                }
-                $("#selectButton2").append(listFleet);
-                document.getElementById("selectButton2").removeAttribute("disabled")
-            })
-        })
-    })
-</script>
 
     <!-- right container -->
     <div class="container_right">
         <h3 class="container_right_title" id="title">
             ... Ergebnis(se) für ... in ...
         </h3>
-        <div class="container_right_sort" style="margin-bottom: 5%;">
-             <div style="margin-right: 3%; font-weight: lighter">
-                Sortieren nach:
+        <!-- The control buttons in the right container -->
+        <div class="container_right_control" style="margin-bottom: 5%;">
+            <div>
+                <button class="btn btn-primary select-all" style="margin-right: 8px">Alle auswählen</button>
+                <button class="btn btn-primary unselect-all" style="margin-right: 8px">Alle abwählen</button>
+                <button class="btn btn-primary random-select" style="margin-right: 8px">10 zufällig ausgewählte</button>
             </div>
-            <select class="container_left_main_select" style="width: 10%; margin-right: 5%; height: 100%" aria-label="Default select example">
-                <option selected value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
         </div>
 
-        <!-- for中引用字典是无效的，仅能够引用字典中的二级字典和内容 -->
-        <div class="container_right_main" id="right"></div>
+        <!-- The bubble animation while loading -->
+        <div class="container_right_main" id="right">
+            <div id="bubble" class="container_right_bubble">
+                <div class="container_bubble">
+                    <div class="bubble" style="animation-delay: -0.6s"></div>
+                    <div class="shadow" style="animation-delay: -0.6s"></div>
+                </div>
+                <div class="container_bubble" style="margin-left: 20px">
+                    <div class="bubble" style="animation-delay: -0.3s"></div>
+                    <div class="shadow" style="animation-delay: -0.3s"></div>
+                </div>
+                <div class="container_bubble" style="margin-left: 20px">
+                    <div class="bubble"></div>
+                    <div class="shadow"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container_right_control" style="margin-bottom: 5%;">
+            <div>
+                <button class="btn btn-primary" id="save" style="margin-right: 8px" data-bs-toggle="modal" data-bs-target="#successModal">Speichern</button>
+                <button class="btn btn-primary" id="download" style="margin-right: 8px" data-bs-toggle="modal" data-bs-target="#successModal">Herunterladen</button>
+                <button class="btn btn-primary" id="static" data-bs-toggle="modal" data-bs-target="#successModal">Statistische Ergebnisse</button>
+            </div>
+        </div>
     </div>
 </div>
-<script language="JavaScript">
+
+<script type="text/javascript">
+    let x = document.getElementById("selectButton1");
+    const patter = JSON.parse({{ journal }})
+    if (patter === 1) {
+        x.options[0].selected = true;
+    }
+    else if (patter === 2) {
+        x.options[2].selected = true;
+        $("#selectButton1").attr("disabled","disabled");
+        let listFleet1 = ""
+        listFleet1 += "<option value='All'>All</option>";
+        $("#selectButton2").append(listFleet1)
+        $("#selectButton2").attr("disabled","disabled");
+    }
+    else {
+        x.options[1].selected = true;
+    }
+    console.log("select1 finish")
+    if (patter !== 2) {
+        let select = {{ classification|safe }};
+        let selection = eval('('+select+')')
+        console.log(selection)
+        let listFleet = "";
+        for(let key in selection){
+            listFleet += "<option value='" + selection[key] + "'>" + selection[key] + "</option>";
+        }
+        $("#selectButton2").append(listFleet);
+        document.getElementById("selectButton2").removeAttribute("disabled");
+        $("#selectButton1").attr("disabled","disabled");
+    }
+</script>
+<!-- Control the datepicker function -->
+<script type="text/javascript">
+    $(function() {
+        $('#datepicker1').datepicker({
+            autoclose: true,
+        });
+    });
+    $(function() {
+        $('#datepicker2').datepicker({
+            autoclose: true,
+        });
+    });
+    $('#datepicker1').change(function() {
+        // 获取第一个日期选择器中的日期
+        var startDate = $('#datepicker1').datepicker('getDate');
+
+        // 设置第二个日期选择器的起始日期为第一个日期选择器的日期
+        $('#datepicker2').datepicker('setStartDate', startDate);
+        // 如果第二个日期选择器中的日期早于第一个日期，则将其重置为空
+        var endDate = new Date($('#datepicker2').val());
+        if (endDate < startDate) {
+            $('#datepicker2').datepicker('setDate', null);
+        }
+    });
+</script>
+
+{#<!-- Control the linkage between drop-down boxes -->#}
+{#<script>#}
+{#    $(document).ready(function (){#}
+{#        $("#selectButton1").on("change", function (){#}
+{#            let selectedValue = $('select#selectButton1 option:selected').text();#}
+{#            document.getElementById("selectButton2").options.length = 0;#}
+{##}
+{#            $.get("afterselect/",{'value': selectedValue}, function (select){#}
+{#                console.log(select)#}
+{##}
+{#                let selection = eval('('+select+')')#}
+{#                console.log(selection)#}
+{#                let listFleet = "";#}
+{#                for(let key in selection){#}
+{#                        listFleet += "<option value='" + selection[key] + "'>" + selection[key] + "</option>";#}
+{#                }#}
+{#                $("#selectButton2").append(listFleet);#}
+{#                document.getElementById("selectButton2").removeAttribute("disabled")#}
+{#            })#}
+{#        })#}
+{#    })#}
+{#</script>#}
+<!-- Show search results in the content section on the right -->
+<script>
     $(document).ready(function (){
         $("#search").on("click", function (){
+            $("#selectButton1").removeAttr("disabled");
+            $("#title").innerText = "... Ergebnis(se) für ... in ..."
             let selectedWeb = $('select#selectButton1 option:selected').text();
             let selectedKat = $('select#selectButton2 option:selected').text();
             let kriterien = document.getElementById('keriterien').value;
             let start = document.getElementById('start').value;
             let end = document.getElementById('end').value;
+            let bubble = document.getElementById('bubble');
+            if (document.getElementById('main_text')) {
+                let old_main_texts = document.querySelectorAll(".container");
+                for (let old_main_text of old_main_texts) {
+                    document.getElementById('right').removeChild(old_main_text);
+                }
+            }
+            bubble.style.display = "flex";
+            $("#selectButton1").attr("disabled","disabled");
 
             $.get("result/",{'selectedWeb': selectedWeb, 'selectedKat': selectedKat, 'kriterien': kriterien, 'start': start, 'end': end}, function (result){
                 let result1 = eval('('+result+')')
-                console.log(result)
+                console.log(result1)
                 document.getElementById("title").innerText = result1['resultnumber']+" Ergebnis(se) für "+result1['kriterien']+" in "+result1['selectedKat']
-                let zeige = ""
-                for (let key in result1['results']) {
+                console.log(result1['results'])
+                bubble.style.display = "none";
+                for (let key in result1['results']['articles']) {
+                    console.log(result1['results']['articles'][key])
                     let main_text = document.createElement('div');
-                    main_text.className = "container_right_main_text";
+                    main_text.className = "container";
+                    main_text.style.borderTop = "black solid 1px";
+                    main_text.style.marginBottom = "15px";
+                    let main_row = document.createElement('div');
+                    main_row.className = "row";
+                    main_text.appendChild(main_row);
+                    let main_col1 = document.createElement('div');
+                    main_col1.className = "col-1";
+                    main_col1.style.margin = "auto";
+                    let checkBox = document.createElement('input');
+                    checkBox.type = "checkbox";
+                    checkBox.className = "checkbox";
+                    main_col1.appendChild(checkBox);
+                    let main_col11 = document.createElement('div');
+                    main_col11.className = "col-11";
+                    main_row.appendChild(main_col1);
+                    main_row.appendChild(main_col11);
                     let main_title = document.createElement('div');
                     main_title.className = "container_right_main_title";
-                    main_title.innerHTML = "Overexpression of Lin28A in neural progenitor cells in vivo does not lead to brain tumor formation but results in reduced spine density";
+                    main_title.innerHTML = result1['results']['articles'][key]['title'];
                     let main_writer = document.createElement('div');
                     main_writer.className = "container_right_main_writer";
-                    main_writer.innerHTML = "Maximilian Middelkamp, Lisa Ruch, Christoph Krisp, Piotr Sumistawaski, Behnam Mohammadi, Matthias Dottermusch, Valerie Meister, Lusas Kuester, Hartmut Schueter, Sabine Windhorst and Julia E. Neumann ";
+                    main_writer.innerHTML = result1['results']['articles'][key]['authors'];
                     let main_publish = document.createElement('div');
                     main_publish.className = "container_right_main_publish";
-                    main_publish.innerHTML = "Published on: 20 November 2021"
+                    main_publish.innerHTML = result1['results']['articles'][key]['published_time'];
                     let button = document.createElement('button');
                     button.className = "btn btn-primary";
                     button.style.marginTop = "10px";
                     button.type = "submit";
                     button.innerHTML = "Download";
-                    main_text.appendChild(main_title);
-                    main_text.appendChild(main_writer);
-                    main_text.appendChild(main_publish);
-                    main_text.appendChild(button);
+                    button.onclick = function (){
+                        window.open(result1['results']['articles'][key]['url'])
+                    };
+                    main_col11.appendChild(main_title);
+                    main_col11.appendChild(main_writer);
+                    main_col11.appendChild(main_publish);
+                    main_col11.appendChild(button);
+                    main_text.id = "main_text";
                     document.getElementById("right").appendChild(main_text);
                 }
             })
         })
     })
+</script>
+<!-- Control the call of the save function -->
+<script>
+    $(document).ready(function (){
+        $("#save").on("click", function (){
+            $.get("save/")
+        })
+    })
+</script>
+<!-- Control the call of the download function -->
+<script>
+    $(document).ready(function (){
+        $("#download").on("click", function (){
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const checkedIndexes = [];
+            checkboxes.forEach(function(checkbox, index) {
+                if (checkbox.checked) {
+                    checkedIndexes.push(index);
+                }
+            });
+            $.get("download/", {'index': checkedIndexes.toString()})
+        })
+    })
+</script>
+<!-- Control of the display of the statistical chart function call -->
+<script>
+    $(document).ready(function (){
+        $("#static").on("click", function (){
+            $.get("static/")
+            window.open("static/", "Static_Result", "width=800,height=600")
+        })
+    })
+</script>
+<!-- Control the checkboxes funtion -->
+<script>
+    $(document).ready(function() {
+        $('.select-all').click(function() {
+            $('.checkbox').prop('checked', true);
+        });
+
+        $('.unselect-all').click(function() {
+            $('.checkbox').prop('checked', false);
+        });
+
+        $('.random-select').click(function() {
+            const numToSelect = 10; // 要选中的复选框数量
+            const checkboxes = $('.checkbox')
+
+            // 如果要选中的数量大于等于复选框总数，就全选所有复选框
+            if (numToSelect >= checkboxes.length) {
+                checkboxes.forEach((checkbox) => (checkbox.checked = true));
+            }
+            else {
+                // 否则，随机选中 numToSelect 个复选框
+                const selectedIndexes = [];
+                while (selectedIndexes.length < numToSelect) {
+                    const randomIndex = Math.floor(Math.random() * checkboxes.length);
+                    if (!selectedIndexes.includes(randomIndex)) {
+                        selectedIndexes.push(randomIndex);
+                        checkboxes[randomIndex].checked = true;
+                    }
+                }
+            }
+        })
+    });
+
+</script>
+<script>
+    // 页面加载完成时执行
+    document.addEventListener('DOMContentLoaded', function() {
+    // 添加渐进动画类名
+    document.getElementById('body').classList.add('content-fade-in');
+    });
+
+    // 监听页面链接点击事件
+    document.addEventListener('click', function(event) {
+        let target = event.target;
+
+        // 检查点击的元素是否是链接
+        if (target.tagName === 'A') {
+            event.preventDefault(); // 阻止默认的页面跳转行为
+
+            // 添加渐出动画类名
+            document.getElementById('body').classList.add('content-fade-out');
+
+            // 在动画结束后进行页面跳转
+            setTimeout(function() {
+            window.location.href = target.href;
+            }, 1000); // 这里的1000表示动画持续时间，单位是毫秒
+        }
+    });
 </script>
 </body>
 </html>
