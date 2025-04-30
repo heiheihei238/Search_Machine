@@ -43,48 +43,36 @@ def handle_http_requests2(url):
 
 def convert_date_form(date_str):
     """
-    :param date_str: "2017-12"
+    :param date_str: "12/31/2021"
     :return: new_date_str = "Dec 2017"
     """
-    date = datetime.strptime(date_str, '%Y-%m')
+    date = datetime.strptime(date_str, '%m/%d/%Y')
     new_date_str = datetime.strftime(date, '%b %Y')
     return new_date_str
 
 
-def find_min_distance_between_regex_matches(text, string2):
+def find_min_distance_between_regex_matches(text, small_n, big_n):
     """
     regex1: the regex of t-test
     :param text: html content
-    :param string2: the keyword string given by the user
+    :param small_n: String
+    :param big_n: String
     :return: if no match is found, return -1. Otherwise returns the minimum distance
     """
     # Find all matches for the first regular expression
     regex1 = re.compile(r'\b(<\w+>)*t(</\w+>)*[\s-]*tests?\b', re.IGNORECASE)
-    regex2 = re.compile(rf'{regex_keyword(string2)}', re.IGNORECASE)
-
-    matches1 = list(re.finditer(regex1, text))
-    if not matches1:
-        print("First match not found")
-        return float('inf')
-
-    # Find all matches for the second regular expression
-    matches2 = list(re.finditer(regex2, text))
-    if not matches2:
-        print("Second match not found")
-        return float('inf')
-
-    # Calculate the distance between each pair of matched items and return the minimum value
-    min_distance = float('inf')  # positive infinity
-    for match1 in matches1:
-        for match2 in matches2:
-            distance = abs(match2.start() - match1.end())
-            if distance < min_distance:
-                min_distance = distance
-
-    if min_distance == float('inf'):
-        print("No matches found")
-        return float('inf')
-
+    regex_patterns = []
+    for n in range(int(small_n), int(big_n) + 1):
+        regex_patterns.append(rf'{regex_keyword(f"n = {n}")}')
+    target_indices = [m.start() for m in re.finditer(regex1, text)]
+    min_distance = float('inf')
+    for pattern in regex_patterns:
+        match_indices = [m.start() for m in re.finditer(pattern, text)]
+        if not match_indices:  # Check if there are no matches for the pattern
+            continue
+        for target_idx in target_indices:
+            distances = [abs(target_idx - match_idx) for match_idx in match_indices]
+            min_distance = min(min_distance, min(distances))
     return min_distance
 
 
@@ -192,6 +180,19 @@ def generate_period_tuple(start_time, end_time):
     return period
 
 
+def generate_keyword(small_n, big_n):
+    """
+    based on small_n and big_n, generate the keyword
+    :param: small_n: String
+    :param: big_n: String
+    """
+    keyword = ''
+    for n in range(int(small_n), int(big_n) + 1):
+        keyword += f'n%3d{str(n)}+'
+    keyword = keyword[:-1]
+    return keyword
+
+
 def generate_url(start_time, end_time, keyword):
     """
     Based on the user's input, generate the corresponding url
@@ -206,22 +207,23 @@ def generate_url(start_time, end_time, keyword):
     end_str = end_time.split()
     start_str[0] = month_str_to_num(start_str[0])
     end_str[0] = month_str_to_num(end_str[0])
-    keyword = keyword.replace('=', '%3D')
-    keyword = keyword.replace(' ', '')
+    # keyword = keyword.replace('=', '%3D')
+    # keyword = keyword.replace(' ', '')
     url = f'https://www.science.org/action/doSearch?field1=AllField&text1=t-test+{keyword}&publication=&Ppub=&AfterMonth={start_str[0]}&AfterYear={start_str[1]}&BeforeMonth={end_str[0]}&BeforeYear={end_str[1]}'
     return url
 
 
-def get_last_related_article(url, html, keyword):
+def get_last_related_article(url, html, small_n, big_n):
     """
     :param url: the url of the pagination page
     https://www.science.org/action/doSearch?field1=AllField&text1=t-test&field2=AllField&text2=p-value&field3=AllField&text3=&publication=&Ppub=&AfterMonth=1&AfterYear=2017&BeforeMonth=12&BeforeYear=2017
-    :param keyword: user defined keyword
+    :param small_n: String
+    :param big_n: String
     :param html: the source code of pagination url
     :return: dict: the last related article and the page
     {'article': 'https://', 'page': '2'}
     """
-    current_page = get_results_num(html) // 300
+    current_page = get_results_num(html) // 150
     # To mark special cases: the last article on the previous page is relevant, the
     # first article on the next page is not
     tag = 0
@@ -230,11 +232,11 @@ def get_last_related_article(url, html, keyword):
         url = url + f"&pageSize=20&startPage={current_page-1}"
         html2 = handle_http_requests2(url)
         articles = get_all_articles(html2)
-        first_is_related = is_related(articles[0], keyword)
-        last_is_related = is_related(articles[-1], keyword)
+        first_is_related = is_related(articles[0], small_n, big_n)
+        last_is_related = is_related(articles[-1], small_n, big_n)
         if first_is_related and not last_is_related:
             result_page = str(current_page)
-            article = binary_search_in_one_page(articles, keyword)
+            article = binary_search_in_one_page(articles, small_n, big_n)
             break
         elif not first_is_related:
             if current_page == 1:
@@ -263,15 +265,16 @@ def get_results_num(html):
     return num
 
 
-def is_related(url, keyword):
+def is_related(url, small_n, big_n):
     """
     Determine if an article is related
     :param url: the url of the article
-    :param keyword: user defined keyword
+    :param small_n: String
+    :param big_n: String
     :return: true or false
     """
     html = handle_http_requests2(url)
-    distance = find_min_distance_between_regex_matches(html, keyword)
+    distance = find_min_distance_between_regex_matches(html, small_n, big_n)
     print(f'the distance is {distance} in {url}')
     return True if distance < 2000 else False
 
@@ -288,10 +291,11 @@ def get_all_articles(html):
     return url_list
 
 
-def binary_search_in_one_page(articles, keyword):
+def binary_search_in_one_page(articles, small_n, big_n):
     """
     Find the last article in one page that matches the criteria by the binary search method
-    :param keyword: user defined keyword
+    :param small_n: String
+    :param big_n: String
     :param articles: the url list of all articles
     :return: html: the url of the last related article
     """
@@ -299,9 +303,9 @@ def binary_search_in_one_page(articles, keyword):
     high = len(articles) - 1
     while low <= high:
         mid = (low + high) // 2
-        if is_related(articles[mid], keyword) and not is_related(articles[mid+1], keyword):
+        if is_related(articles[mid], small_n, big_n) and not is_related(articles[mid+1], small_n, big_n):
             return articles[mid]
-        elif is_related(articles[mid], keyword) and is_related(articles[mid+1], keyword):
+        elif is_related(articles[mid], small_n, big_n) and is_related(articles[mid+1], small_n, big_n):
             low = mid + 1
         else:
             high = mid - 1
@@ -315,7 +319,7 @@ def get_all_related_article(start_time, end_time, keyword, last_article):
     :param end_time: "Dec 2017"
     :param keyword: "n = 3" the space is required between "="
     :param last_article: {"page": "3", "article": "https://"}
-    :return: articles: {"Biomedicine":{"title": "Biomedicine", "url": "https://", "pdf": "https://", "authors": "...", "published time": "24 Jun 2017"}}
+    :return: articles: {"Biomedicine":{"title": "Biomedicine", "url": "https://", "pdf": "https://", "authors": "...", "published_time": "24 Jun 2017"}}
     """
     # f'https://www.science.org/action/doSearch?field1=AllField&text1=t-test&field2=AllField&text2={keyword}&field3=AllField&text3=&publication=&Ppub=&AfterMonth={start_str[1]}&AfterYear={start_str[2]}&BeforeMonth={end_str[1]}&BeforeYear={end_str[2]}'
     url_pages = [generate_url(start_time, end_time, keyword) + f'&pageSize=20&startPage={page}' for page in range(int(last_article["page"]))]
@@ -334,7 +338,7 @@ def get_articles_info_in_one_page(html):
     """
 
     :param html: the source code of a page
-    :return: articles: {"Biomedicine":{"title": "Biomedicine", "url": "https://", "pdf": "https://", "authors": "...", "published time": "24 Jun 2017"}}
+    :return: articles: {"Biomedicine":{"title": "Biomedicine", "url": "https://", "pdf": "https://", "authors": "...", "published_time": "24 Jun 2017"}}
     """
     soup = BeautifulSoup(html, 'html.parser')
     all_divs = soup.find_all(name='div', class_='card-header')
@@ -345,11 +349,22 @@ def get_articles_info_in_one_page(html):
         title = re.sub(r"\s{2,}", " ", title_with_space)
         url = 'https://www.science.org' + div.find('a').get('href')
         pdf = url.replace('/doi', '/doi/pdf') + '?download=true'
-        authors_span = div.find(name='div', class_='authors').find_all('span')
-        authors_list = [span.text for span in authors_span][1:]
-        authors = 'by ' + ', '.join(authors_list)
-        published_time = div.find('time').text
-        articles[title] = {"title": title, "url": url, "pdf": pdf, "authors": authors, "published time": published_time}
+
+        # to judge: if this article has authors
+        is_authors_span = div.find(name='div', class_='authors')
+        if is_authors_span is None:
+            authors = ''
+        else:
+            authors_span = is_authors_span.find_all('span')
+            authors_list = [span.text for span in authors_span][1:]
+            authors = 'by ' + ', '.join(authors_list)
+
+        # to judge: if this article has published time
+        is_time = div.find('time')
+        if is_time is None:
+            continue
+        published_time = is_time.text
+        articles[title] = {"title": title, "url": url, "pdf": pdf, "authors": authors, "published_time": published_time}
     return articles
 
 
@@ -358,7 +373,7 @@ def get_only_related_articles_info(html, last_article):
 
     :param html: the source code of the page
     :param last_article: {"page": "3", "article": "https://"}
-    :return: articles: {"Biomedicine":{"title": "Biomedicine", "url": "https://", "pdf": "https://", "authors": "...", "published time": "24 Jun 2017"}}
+    :return: articles: {"Biomedicine":{"title": "Biomedicine", "url": "https://", "pdf": "https://", "authors": "...", "published_time": "24 Jun 2017"}}
     """
     soup = BeautifulSoup(html, 'html.parser')
     all_divs = soup.find_all(name='div', class_='card-header')
@@ -369,11 +384,23 @@ def get_only_related_articles_info(html, last_article):
         title = re.sub(r"\s{2,}", " ", title_with_space)
         url = 'https://www.science.org' + div.find('a').get('href')
         pdf = url.replace('/doi', '/doi/pdf') + '?download=true'
-        authors_span = div.find(name='div', class_='authors').find_all('span')
-        authors_list = [span.text for span in authors_span][1:]
-        authors = 'by ' + ', '.join(authors_list)
-        published_time = div.find('time').text
-        articles[title] = {"title": title, "url": url, "authors": authors, "published time": published_time}
+
+        # to judge: if this article has authors
+        is_authors_span = div.find(name='div', class_='authors')
+        if is_authors_span is None:
+            authors = ''
+        else:
+            authors_span = is_authors_span.find_all('span')
+            authors_list = [span.text for span in authors_span][1:]
+            authors = 'by ' + ', '.join(authors_list)
+
+        # to judge: if this article has published time
+        is_time = div.find('time')
+        if is_time is None:
+            continue
+        published_time = is_time.text
+
+        articles[title] = {"title": title, "url": url, "authors": authors, "published_time": published_time, "pdf": pdf}
         if url == last_article['article']:
             break
     return articles
@@ -384,9 +411,9 @@ def generate_diagram(start_time, end_time, articles):
 
     :param start_time: Jan 2017
     :param end_time: Dec 2017
-    :param articles: {"Biomedicine":{"title": "Biomedicine", "url": "https://", "pdf": "https://", "authors": "...", "published time": "24 Jun 2017"}}
-    :return: time_stamp: If the time difference is less than or equal to one year
-                         --> {'Jan 2017': 12, 'Feb 2017': 4, ...}
+    :param articles: {"Biomedicine":{"title": "Biomedicine", "url": "https://", "pdf": "https://", "authors": "...", "published_time": "24 Jun 2017"}}
+    :return: sorted_items: If the time difference is less than or equal to one year
+                         --> {'2017-01': 12, '2017-02': 4, ...}
                          else
                          ---> {'2010': 103, '2011': 194, ...}
     """
@@ -396,21 +423,27 @@ def generate_diagram(start_time, end_time, articles):
     time_stamp = {}
     if delta > 365:
         for i, t in articles.items():
-            date = datetime.strptime(t["published time"], '%d %b %Y')
+            date = datetime.strptime(t["published_time"], '%d %b %Y')
             year = str(date.year)
             if year in time_stamp:
                 time_stamp[year] += 1
             else:
                 time_stamp[year] = 1
+        # sort the time_stamp according to the time
+        sorted_items = sorted(time_stamp.items(), key=lambda x: datetime.strptime(x[0], '%Y'))
+
     else:
         for i, t in articles.items():
-            date = datetime.strptime(t["published time"], '%d %b %Y')
+            date = datetime.strptime(t["published_time"], '%d %b %Y')
             year_month = str(date.year) + '-' + str(date.month).zfill(2)
             if year_month in time_stamp:
                 time_stamp[year_month] += 1
             else:
                 time_stamp[year_month] = 1
-    return time_stamp
+        # sort the time_stamp according to the time
+        sorted_items = sorted(time_stamp.items(), key=lambda x: datetime.strptime(x[0], '%Y-%m'))
+
+    return sorted_items
 
 
 def merge_diagram_articles(diagram, articles):

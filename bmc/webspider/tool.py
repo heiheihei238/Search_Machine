@@ -147,14 +147,15 @@ def intersection(dict1, dict2):
     return results
 
 
-def get_articles_by_date_range(start_time, end_time, keyword, url="https://www.biomedcentral.com/"):
+def get_articles_by_date_range(start_time, end_time, url="https://www.biomedcentral.com/"):
     """
     All articles with "t-test" and the keyword inputted by user within the specified date range
     will be found in this method
     :param url: the first page of pagination. The default value belong to global search
     :param start_time: '01 January 2010'
     :param end_time: '01 February 2012'
-    :param keyword: 'p-value'
+    :param small_n: String
+    :param big_n: String
     :return: articles:dict
     {'BMP8A sustains spermatogenesis by activating both SMAD1/5/8 and SMAD2/3 in spermatogonia':
         {'title': 'BMP8A sustains spermatogenesis by activating both SMAD1/5/8 and SMAD2/3 in spermatogonia',
@@ -171,8 +172,8 @@ def get_articles_by_date_range(start_time, end_time, keyword, url="https://www.b
     }
     """
     results = {}
-    last_article = binary_search_for_article(start_time, keyword, False, url=url)
-    first_article = binary_search_for_article(end_time, keyword, True, url=url)
+    last_article = binary_search_for_article(start_time, 'n', False, url=url)
+    first_article = binary_search_for_article(end_time, 'n', True, url=url)
     first_page = int(first_article['page'])
     last_page = int(last_article['page'])
     end_date = datetime.strptime(end_time, '%d %B %Y')
@@ -181,11 +182,11 @@ def get_articles_by_date_range(start_time, end_time, keyword, url="https://www.b
     # get valid articles in the first and the last page
     # Get the articles according to a date range in a page
     if url == "https://www.biomedcentral.com/":  # global search
-        url1 = f'{url}search?searchType=publisherSearch&sort=PubDate&page={first_page}&query=t-test+{keyword}'
-        url2 = f'{url}search?searchType=publisherSearch&sort=PubDate&page={last_page}&query=t-test+{keyword}'
+        url1 = f'{url}search?searchType=publisherSearch&sort=PubDate&page={first_page}&query=t-test+n'
+        url2 = f'{url}search?searchType=publisherSearch&sort=PubDate&page={last_page}&query=t-test+n'
     else:  # classification search
-        url1 = f'{url}articles?tab=keyword&searchType=journalSearch&sort=PubDate&query=t-test+{keyword}&page={first_page}'
-        url2 = f'{url}articles?tab=keyword&searchType=journalSearch&sort=PubDate&query=t-test+{keyword}&page={last_page}'
+        url1 = f'{url}articles?tab=keyword&searchType=journalSearch&sort=PubDate&query=t-test+n&page={first_page}'
+        url2 = f'{url}articles?tab=keyword&searchType=journalSearch&sort=PubDate&query=t-test+n&page={last_page}'
     x1 = get_all_articles(url1)
     x2 = get_all_articles(url2)
     merged_articles = {**x1, **x2}
@@ -198,11 +199,11 @@ def get_articles_by_date_range(start_time, end_time, keyword, url="https://www.b
     page_list = [i for i in range(first_page + 1, int(last_page))]
     if url == "https://www.biomedcentral.com/":  # global search
         url_list = [
-            f"{url}search?searchType=publisherSearch&sort=PubDate&page={page}&query=t-test+{keyword}"
+            f"{url}search?searchType=publisherSearch&sort=PubDate&page={page}&query=t-test+n"
             for page in page_list]
     else:  # classification search
         url_list = [
-            f"{url}articles?tab=keyword&searchType=journalSearch&sort=PubDate&query=t-test+{keyword}&page={page}"
+            f"{url}articles?tab=keyword&searchType=journalSearch&sort=PubDate&query=t-test+n&page={page}"
             for page in page_list]
     for url in url_list:
         articles = get_all_articles(url)
@@ -357,12 +358,13 @@ def binary_search_for_article(date, keyword, tag, url='https://www.biomedcentral
     return {'page': current_page, 'article': article}
 
 
-def get_related_articles(articles, keyword):
+def get_related_articles(articles, small_n, big_n):
     """
     The articles are already found according to start time and end time.
     This function further filters out articles that meet the relevance criteria.
     :param articles: Information on all articles within the specified date range
-    :param keyword: user defined keyword
+    :param small_n: String
+    :param big_n: String
     :return: results: dict
     """
     number = len(articles)
@@ -370,63 +372,52 @@ def get_related_articles(articles, keyword):
     results = {}
     print(f"the total number of to be tested article is {number}")
     for i, t in articles.items():
-        if is_related(t['url'], keyword):
+        if is_related(t['url'], small_n, big_n):
             results.update({i: t})
         current_number += 1
-        if number % 100 == 0:
+        if current_number % 100 == 0:
             print(f'the current process is {current_number}/{number}')
     return results
 
 
-def is_related(url, keyword):
+def is_related(url, small_n, big_n):
     """
     to judge if an article meets the relevance criteria
     :param url: the url of the article
-    :param keyword: user defined keyword
+    :param small_n: String
+    :param big_n: String
     :return: True or False
     """
     html = handle_http_requests(url)
     if html == '':
         return False
-    distance = find_min_distance_between_regex_matches(html, keyword)
-    print(f'the distance is {distance} in {url}')
+    distance = find_min_distance_between_regex_matches(html, small_n, big_n)
+    # print(f'the distance is {distance} in {url}')
     return True if distance < 2000 else False
 
 
-def find_min_distance_between_regex_matches(html, keyword):
+def find_min_distance_between_regex_matches(html, small_n, big_n):
     """
     regex1: the regex of t-test
     :param html: html content
-    :param keyword: the keyword string given by the user
+    :param small_n: String
+    :param big_n: String
     :return: if no match is found, return -1. Otherwise returns the minimum distance
     """
     # Find all matches for the first regular expression
     regex1 = re.compile(r'\b(<\w+>)*t(</\w+>)*[\s-]*tests?\b', re.IGNORECASE)
-    regex2 = re.compile(rf'{regex_keyword(keyword)}', re.IGNORECASE)
-
-    matches1 = list(re.finditer(regex1, html))
-    if not matches1:
-        print("First match not found")
-        return float('inf')
-
-    # Find all matches for the second regular expression
-    matches2 = list(re.finditer(regex2, html))
-    if not matches2:
-        print("Second match not found")
-        return float('inf')
-
-    # Calculate the distance between each pair of matched items and return the minimum value
-    min_distance = float('inf')  # positive infinity
-    for match1 in matches1:
-        for match2 in matches2:
-            distance = abs(match2.start() - match1.end())
-            if distance < min_distance:
-                min_distance = distance
-
-    if min_distance == float('inf'):
-        print("No matches found")
-        return float('inf')
-
+    regex_patterns = []
+    for n in range(int(small_n), int(big_n) + 1):
+        regex_patterns.append(rf'{regex_keyword(f"n = {n}")}')
+    target_indices = [m.start() for m in re.finditer(regex1, html)]
+    min_distance = float('inf')
+    for pattern in regex_patterns:
+        match_indices = [m.start() for m in re.finditer(pattern, html)]
+        if not match_indices:  # Check if there are no matches for the pattern
+            continue
+        for target_idx in target_indices:
+            distances = [abs(target_idx - match_idx) for match_idx in match_indices]
+            min_distance = min(min_distance, min(distances))
     return min_distance
 
 

@@ -67,25 +67,26 @@ def search(request, journal):
 def result(request, journal):
     selectedWeb = request.GET['selectedWeb']
     selectedKat = request.GET['selectedKat']
-    kriterien = request.GET['kriterien']
+    kriterien_min = request.GET['kriterien_min']
+    kriterien_max = request.GET['kriterien_max']
     start = request.GET['start']
     end = request.GET['end']
     results = {}
     if selectedWeb == "BMC-Journal":
         if selectedKat == "All":
-            results = webspider.search_bmc2(start_time=start, end_time=end, keyword=kriterien)
+            results = webspider.search_bmc2(kriterien_min, kriterien_max, start_time=start, end_time=end)
         else:
-            results = webspider.search_bmc(classification=selectedKat, start_time=start, end_time=end, keyword=kriterien)
+            results = webspider.search_bmc(kriterien_min, kriterien_max, classification=selectedKat, start_time=start, end_time=end)
     elif selectedWeb == "PLOS":
         results = webspider3.search_plos(classification=find_selectedKat_num(str(selectedKat)), start_time=start, end_time=end, keyword=kriterien)
     elif selectedWeb == "Science-Translational-Medicine":
-        results = webspider2.search_science(start, end, kriterien)
-    searchresult = {'results': results, 'resultnumber': len(results['articles']), 'kriterien': kriterien,
+        results = webspider2.search_science(start, end, kriterien_min, kriterien_max)
+    searchresult = {'results': results, 'resultnumber': len(results['articles']), 'kriterien': 'n = '+kriterien_min+' - '+kriterien_max,
                     'selectedKat': selectedKat}
     SaveItem.searchresult = results
     SaveItem.selectedWeb = selectedWeb
     SaveItem.selectedKat = selectedKat
-    SaveItem.kriterien = kriterien
+    SaveItem.kriterien = 'n = '+kriterien_min+' - '+kriterien_max
     SaveItem.start = start
     SaveItem.end = end
     SaveItem.diagram = results['diagram']
@@ -159,6 +160,7 @@ def static_result(request, journal):
     y = list(SaveItem.diagram.values())
     print(y)
     plt.bar(x, y)
+    plt.xticks(rotation=90)
 
     buffer = io.BytesIO()
     plt.savefig(buffer, format='png')
