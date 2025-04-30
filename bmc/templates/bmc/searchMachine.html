@@ -95,11 +95,8 @@
             <div class="container_left_main_choose">
                 Bitte geben Sie ihre Suchkriterien ein
             </div>
-            <div style="width: 70%; display: flex; justify-content: center; align-items: center; flex-wrap: nowrap">
-                n =
-                <input type="text" class="form-control" style="margin: 0 5% 0 5%; width: 10%" aria-label="Suchkriterien" aria-describedby="basic-addon1" id="keriterien1">
-                zu
-                <input type="text" class="form-control" style="margin: 0 5% 0 5%; width: 10%" aria-label="Suchkriterien" aria-describedby="basic-addon1" id="keriterien2">
+            <div class="container_left_main_select">
+                <input type="text" class="form-control" placeholder="Suchkriterien" aria-label="Suchkriterien" aria-describedby="basic-addon1" id="keriterien">
             </div>
             <button class="btn btn-primary" style="margin-top: 30px; margin-bottom: 20px" type="submit" id="search">Suche</button>
         </div>
@@ -234,8 +231,7 @@
             $("#title").innerText = "... Ergebnis(se) für ... in ..."
             let selectedWeb = $('select#selectButton1 option:selected').text();
             let selectedKat = $('select#selectButton2 option:selected').text();
-            let kriterien_min = document.getElementById('keriterien1').value;
-            let kriterien_max = document.getElementById('keriterien2').value;
+            let kriterien = document.getElementById('keriterien').value;
             let start = document.getElementById('start').value;
             let end = document.getElementById('end').value;
             let bubble = document.getElementById('bubble');
@@ -248,7 +244,7 @@
             bubble.style.display = "flex";
             $("#selectButton1").attr("disabled","disabled");
 
-            $.get("result/",{'selectedWeb': selectedWeb, 'selectedKat': selectedKat, 'kriterien_min': kriterien_min, 'kriterien_max': kriterien_max, 'start': start, 'end': end}, function (result){
+            $.get("result/",{'selectedWeb': selectedWeb, 'selectedKat': selectedKat, 'kriterien': kriterien, 'start': start, 'end': end}, function (result){
                 let result1 = eval('('+result+')')
                 console.log(result1)
                 document.getElementById("title").innerText = result1['resultnumber']+" Ergebnis(se) für "+result1['kriterien']+" in "+result1['selectedKat']
